@@ -1,0 +1,36 @@
+<body>
+    <form action="./submitReview.php" method="post" id="reviewForm">
+
+        <label for="title">Title:</label><br>
+        <input type="text" id="title" name="title"><br>
+
+        <label for="name">Name <i>(leave blank for iklone, unused)</i>:</label><br>
+        <input type="text" id="name" name="name"><br>
+
+        <label for="review">Post:</label><br>
+        <textarea name="review" id="review" rows="5" cols="80"></textarea></br>
+
+        <label for="score">Score (unused):</label><br>
+        <select id="score" name="score">
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+        </select>
+
+        <hr>
+
+        <label for="password">Password:</label><br>
+        <input type="text" id="password" name="password"><br>
+
+        <div>
+            <button type="submit" class="redButton">Submit</button>
+        </div>
+    </form>
+</body>

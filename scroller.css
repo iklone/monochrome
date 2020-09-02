@@ -1,0 +1,52 @@
+.scroller {
+    height: 200px;	
+    overflow: hidden;
+    position: relative;
+    vertical-align: bottom;
+}
+
+.scroller h3 {
+    position: absolute;
+    bottom: 0;
+}
+
+.scroller h3 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 50px;
+    text-align: center;
+    /* Starting position */
+    -moz-transform:translateY(0%);
+    -webkit-transform:translateY(0%);	
+    transform:translateY(0%);
+    /* Apply animation to this element */	
+    -moz-animation: scroller 5s linear infinite;
+    -webkit-animation: scroller 5s linear infinite;
+    animation: scroller 5s linear infinite;
+}
+
+/* Move it (define the animation) */
+@-moz-keyframes scroller {
+    0%   { -moz-transform: translateY(-100%); }
+    100% { -moz-transform: translateY(100%); }
+}
+
+@-webkit-keyframes scroller {
+    0%   { -webkit-transform: translateY(-100%); }
+    100% { -webkit-transform: translateY(100%); }
+}
+
+@keyframes scroller {
+    0%   { 
+    -moz-transform: translateY(-100%); /* Firefox bug fix */
+    -webkit-transform: translateY(-100%); /* Firefox bug fix */
+    transform: translateY(-50%); 		
+    }
+    100% { 
+    -moz-transform: translateY(100%); /* Firefox bug fix */
+    -webkit-transform: translateY(100%); /* Firefox bug fix */
+    transform: translateY(100%); 
+    }
+} 
