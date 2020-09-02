@@ -81,3 +81,7 @@ hr {
 .revBody {
     text-align: left;
 }
+
+#term {
+    width: 90%;
+}

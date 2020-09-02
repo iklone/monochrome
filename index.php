@@ -127,9 +127,25 @@
                 <ul id="moat"></ul>
             </td>
             <td class="feedtd">
+                <form id="searchForm">
+                    <input type="text" id="term" name="term" placeholder="Search"
+                        <?php
+                            if (isset($_GET["term"])) {
+                                echo 'value="' . $_GET["term"] . '"';
+                            }
+                        ?>
+                        >
+                    <button type="submit" class="redButton">Search</button>
+                </form>
+
+                <div id="resultNum"></div>
+                <hr>
+
                 <?php
                     $revList = glob('./posts/*');
                     rsort($revList);
+
+                    $resultNum = 0;
 
                     foreach($revList as $rev) {
                         $file = fopen($rev, "r");
@@ -153,6 +169,7 @@
                         }
 
                         if ($include) {
+                            $resultNum++;
                             $review = "";
                             while(! feof($file)) {
                                 $review = $review . fgets($file);
@@ -202,4 +219,14 @@
     <div id="foot">
         This website is run by iklone in the year <?php echo date("Y"); ?>. Contact me on Twitter <a href="https://twitter.com/iklone">@iklone</a>.
     </div>
+
+    <script>
+        document.getElementById("resultNum").innerHTML = "<?php
+            if ($resultNum == 0) {
+                echo "No posts found";
+            } else {
+                echo $resultNum . " posts listed";
+            }
+            ?>";
+    </script>
 </body>
