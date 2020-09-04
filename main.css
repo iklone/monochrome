@@ -16,8 +16,12 @@ div {
     padding: 1px;
 }
 
-a, b, i{
+a, b, i {
     border: none;
+}
+
+a:hover {
+    font-style: italic;
 }
 
 #head {

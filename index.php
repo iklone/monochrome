@@ -38,12 +38,15 @@
     </style>
 
     <script>
-        window.onload = initialise();
+        function sleep(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
 
         async function initialise() {
-            await seasonalList(<?php echo date("Y") . ', "' . $APIseason[$season] . '"';?>);
-            await favList();
             setipsum();
+            await seasonalList(<?php echo date("Y") . ', "' . $APIseason[$season] . '"';?>);
+            await sleep(1000);
+            await favList();
         }
 
         async function seasonalList(year, season) {
@@ -91,8 +94,16 @@
             newItem.appendChild(newVal);
             parentList.appendChild(newItem);
         }
+
+        function setipsum() {
+            ipsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.";
+            ipsumClasses = document.getElementsByClassName("ipsum");
+
+            for (ipsumClass in ipsumClasses) {
+                ipsumClasses[ipsumClass].innerHTML = ipsum;
+            }
+        }
     </script>
-    <script src="loremipsum.js"></script>
 </head>
 <body>
     <div id="head">
@@ -233,5 +244,7 @@
                 echo $resultNum . " posts listed";
             }
             ?>";
+
+        window.onload = initialise();
     </script>
 </body>
