@@ -20,6 +20,7 @@
 
     <title><?php echo $lowertitle ?></title>
     <link rel="icon" type="image/png" href="<?php echo $iconcolour[$colour];?>"/>
+    <meta name="description" content="A blog about anime, manga and otaku culture run by iklone. My taste is better than yours.">
 
     <link rel = "stylesheet" type = "text/css" href = "./main.css">
 
