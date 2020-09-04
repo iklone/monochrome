@@ -77,13 +77,13 @@
                     }
                 ?>
             </td>
-            <?php include "./foot.php";?>
+            <td class="bordtd" id="rbord">
+                <?php include "./rbord.php";?>
+            </td>
         </table>
     </div>
 
-    <div id="foot">
-        This website is run by iklone in the year <?php echo date("Y"); ?>. Contact me on Twitter <a href="https://twitter.com/iklone">@iklone</a>.
-    </div>
+    <?php include "./foot.php";?>
 
     <script>
         document.getElementById("resultNum").innerHTML = "<?php

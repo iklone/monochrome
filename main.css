@@ -55,7 +55,6 @@ td {
     width: 25%;
 }
 
-
 .feedtd {
     width: 50%;
     text-align: center;
@@ -88,4 +87,8 @@ hr {
 
 #term {
     width: 90%;
+}
+
+#maidDB {
+    text-align: center;
 }

@@ -5,8 +5,6 @@
         1000以上のアニメを見てばことがなければこのサイトを読まないでください。
     </div>
     <div id="bar">
-        <button>Alpha</button>
-        <button>Beta</button>
-        <button>Gamma</button>
+        <button type="button" onclick="window.location.href='./maids';">Maid DB</button>
     </div>
 </div>
