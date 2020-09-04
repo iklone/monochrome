@@ -5,7 +5,7 @@
         error_reporting(E_ERROR | E_PARSE);
 
         $password = $_POST["password"];
-        $truth = "mechameido";
+        $truth = "password";
 
         if ($password == $truth) {
             echo "Permission granted";
