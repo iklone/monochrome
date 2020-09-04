@@ -11,11 +11,15 @@
 
         $titlecolour = array("SCARLET", "JADE", "VIOLET");
         $titlefantasy = array("FANTASY", "DELUSION", "DREAM", "ILLUSION", "HALLUCINATION", "APPARITION", "PHANTASM", "AMNESIA");
+        $iconcolour = array("./faviconRed.png", "./faviconGreen.png", "./faviconPurple.png");
 
-        $title = "A " . $titlecolour[$colour] . " " . $titlefantasy[rand(0, sizeof($titlefantasy) - 1)];
+        $fantasy = $titlefantasy[rand(0, sizeof($titlefantasy) - 1)];
+        $title = "A " . $titlecolour[$colour] . " " . $fantasy;
+        $lowertitle = ucfirst(strtolower($titlecolour[$colour])) . " " . ucfirst(strtolower($fantasy));
     ?>
 
-    <title><?php echo $title ?></title>
+    <title><?php echo $lowertitle ?></title>
+    <link rel="icon" type="image/png" href="<?php echo $iconcolour[$colour];?>"/>
 
     <link rel = "stylesheet" type = "text/css" href = "./main.css">
 
@@ -107,7 +111,7 @@
         <table>
             <td class="bordtd" id="lbord">
                 <h3>About This Website</h3>
-                <p>This website is the latest incarnation of a string of otaku-themed blogs stretching over the last six years. I am the administrator and writer, iklone and I post about otaku media.</p>
+                <p>This website is the latest incarnation of a string of otaku-themed blogs stretching over the last six years. I am the administrator and writer, iklone, and I post about otaku media.</p>
                 <p>This site was developed in 2020 and is meant to look like this. It is the fifth anime website I've run, the older (extant) sites are archived <a href="https://www.blogger.com/profile/05726480952560360312">here</a> if you want to look around.</p>
                 <p>I post about a range of topics, primarily anime commentary and analysis (lol). I also post thoughts on otaku culture and anime-adjacent media. My favourite period of anime is around 1995 to 2005.</p>
                 <hr>
