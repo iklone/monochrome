@@ -91,4 +91,9 @@ hr {
 
 #maidDB {
     text-align: center;
+    text-decoration: none;
+}
+
+#maidDB tr td a {
+    text-decoration: none;
 }
