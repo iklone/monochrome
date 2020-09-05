@@ -15,6 +15,9 @@
     $fantasy = $titlefantasy[rand(0, sizeof($titlefantasy) - 1)];
     $title = "A " . $titlecolour[$colour] . " " . $fantasy;
     $lowertitle = ucfirst(strtolower($titlecolour[$colour])) . " " . ucfirst(strtolower($fantasy));
+
+    $revList = glob('./posts/*');
+    rsort($revList);
 ?>
 
 <style>

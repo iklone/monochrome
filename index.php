@@ -31,9 +31,6 @@
                 <hr>
 
                 <?php
-                    $revList = glob('./posts/*');
-                    rsort($revList);
-
                     $resultNum = 0;
 
                     foreach($revList as $rev) {
