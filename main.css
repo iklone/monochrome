@@ -77,7 +77,7 @@ hr {
     margin: 5px;
 }
 
-.revTitle a, h1 a{
+.revTitle a, h1 a {
     text-decoration: none;
 }
 
@@ -94,6 +94,10 @@ hr {
     text-decoration: none;
 }
 
-#maidDB tr td a {
+#maidDB a {
     text-decoration: none;
+}
+
+#maidDB td {
+    cursor: pointer;
 }
