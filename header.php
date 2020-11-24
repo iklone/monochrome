@@ -20,7 +20,7 @@
     rsort($revList);
 ?>
 
-<style>
+<!--<style>
     * {
         <?php
             $forecolour = array("rgb(255, 0, 0)", "rgb(0, 200, 0)", "rgb(200, 0, 200)");
@@ -31,7 +31,7 @@
             echo "background-color: " . $backcolour[$colour] . ";";
         ?>
     }
-</style>
+</style>-->
 
 <script>
     function sleep(ms) {

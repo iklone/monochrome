@@ -5,7 +5,7 @@
     <link rel="icon" type="image/png" href="<?php echo $iconcolour[$colour];?>"/>
     <meta name="description" content="A blog about anime, manga and otaku culture run by iklone. My taste is better than yours.">
 
-    <link rel = "stylesheet" type = "text/css" href = "./main.css">
+    <link rel = "stylesheet" type = "text/css" href = "./calm.css">
 </head>
 <body>
     <?php include "./head.php";?>
